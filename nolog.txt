@@ -1,0 +1,6 @@
+PRIVACY POLICY:
+
+This app runs on a web server that logs information such as your IP address and other information that your LaMetric sends when it requests data. This information may be stored in logs for diagnostic purposes, but will not be used for any other purpose.
+
+Any account-specific data for third party services is not kept at all.
+
