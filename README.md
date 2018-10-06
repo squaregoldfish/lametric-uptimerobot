@@ -1,5 +1,5 @@
 # lametric-uptimerobot
-Display UptimeRobot statuses on LaMetric
+Display UptimeRobot monitor status on LaMetric
 
 ## Description
 This app for LaMetric displays counts of your UptimeRobot monitors. The counts are:
