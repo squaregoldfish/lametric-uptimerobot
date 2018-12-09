@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import sys,cgi,cgitb
+import traceback
 import json
 import utr
 cgitb.enable()
@@ -37,7 +38,8 @@ except Exception as e:
 sys.stdout.write('Content-type: application/json\n\n')
 
 if error is not None:
-  sys.stdout.write('{"frames":[{"text":"' + str(error) + '","icon":"i23080"}]}')
+  sys.stdout.write('{"frames":[{"text":"Cannot retrieve Uptime Robot status","icon":"i23080"}]}')
+  sys.stderr.write(traceback.format_exc())
 else:
   output = {}
   output['frames'] = []
