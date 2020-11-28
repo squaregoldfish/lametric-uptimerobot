@@ -46,26 +46,26 @@ else:
 
   upout = {}
   upout['text'] = str(up) + ' ↑'
-  upout['icon'] = 'i23079'
+  upout['icon'] = 'i41593'
   output['frames'].append(upout)
 
   if down > 0:
     downout = {}
     downout['text'] = str(down) + ' ↓'
-    downout['icon'] = 'i23080'
+    downout['icon'] = 'i41594'
     output['frames'].append(downout)
 
   if paused > 0:
     pausedout = {}
     pausedout['text'] = str(paused) + ' II'
-    pausedout['icon'] = 'i23081'
+    pausedout['icon'] = 'i41595'
     output['frames'].append(pausedout)
    
 
   if unknown > 0:
     unknownout = {}
     unknownout['text'] = str(unknown) + ' ???'
-    unknownout['icon'] = 'i23081'
+    unknownout['icon'] = 'i41595'
     output['frames'].append(unknownout)
 
   sys.stdout.write(json.dumps(output))
