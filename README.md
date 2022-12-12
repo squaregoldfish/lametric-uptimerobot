@@ -6,7 +6,7 @@ This app for LaMetric displays counts of your UptimeRobot monitors. The counts a
 * Number of Up monitors (e.g. `7 ↑`). If all are up, displays `All ↑`.
 * Number of Down montiors (e.g. `2 ↓`).
 * Number of Paused monitors. (e.g. `3 ⏸`). Optional - see below.
-* Number of Unknown monitors (e.g. `1 ???`). Usually display when a monitor has not been checked.
+* Number of Unknown monitors (e.g. `1 ???`). Usually displayed when a monitor has not been checked.
 
 ## Parameters
 ### UptimeRobot API Account Key
