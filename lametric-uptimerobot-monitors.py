@@ -56,7 +56,6 @@ def getmonitorcounts(apikey, ignore_paused):
           unknown = unknown + 1
 
   except Exception as e:
-    print(traceback.format_exc())
     error = e
 
   return [error, up, down, paused, unknown, total]
@@ -92,18 +91,15 @@ except Exception as e:
 
 sys.stdout.write('Content-type: application/json\n\n')
 
+output = {}
+output['frames'] = []
+
 if error is not None:
-  with open('/home/squaregoldfish/temp/lametric-uptimerobot-monitors.err', 'a') as f:
-    f.write(arguments)
-    f.write('\n')
-    f.write(repr(error))
-    f.write('\n')
-
-  sys.stdout.write('{"frames":[{"text":"Cannot retrieve Uptime Robot status","icon":"i23080"}]}')
+  errorframe = {}
+  errorframe['text'] = repr(error)
+  errorframe['icon'] = 'i41594'
+  output['frames'].append(errorframe)
 else:
-  output = {}
-  output['frames'] = []
-
   upout = {}
   upout['text'] = str(up) + ' ↑'
   upout['icon'] = 'i41593'
@@ -128,5 +124,5 @@ else:
     unknownout['icon'] = 'i41595'
     output['frames'].append(unknownout)
 
-  sys.stdout.write(json.dumps(output))
+sys.stdout.write(json.dumps(output))
 
